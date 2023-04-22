@@ -36,3 +36,7 @@ apply "template_parts/db_template.rb"
 ## Ready to go?))
 
 Then simply run `rails s` and enjoy the codding!
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
