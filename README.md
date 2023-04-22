@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/loqimean/base_app_template/actions/workflows/ci.yml/badge.svg)](https://github.com/loqimean/base_app_template/actions)
+[![Actions Status](https://github.com/the-rubies-way/base_app_template/actions/workflows/ci.yml/badge.svg)](https://github.com/the-rubies-way/base_app_template/actions)
 
 # Hi
 
@@ -7,10 +7,10 @@ You are discovering pretty quite rails app template to have pre-settuped app rea
 To generate project use command:
 
 ```bach
-rails new app_name -a propshaft --css=tailwind --database=postgresql --skip-jbuilder -T --template=https://github.com/loqimean/base_app_template/blob/master/template.rb
+rails new app_name -a propshaft --css=tailwind --database=postgresql --skip-jbuilder -T --template=https://github.com/the-rubies-way/base_app_template/blob/master/template.rb
 ```
 
-To generate whole project, or just add `--template=https://github.com/loqimean/base_app_template/blob/master/template.rb` to your app generation string if you have own options
+To generate whole project, or just add `--template=https://github.com/the-rubies-way/base_app_template/blob/master/template.rb` to your app generation string if you have own options
 
 ###### Some tips:
 
