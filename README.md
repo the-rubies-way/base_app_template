@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/loqimean/base_app_template/actions/workflows/ci.yml/badge.svg)](https://github.com/loqimean/base_app_template/actions)
+
 # Hi
 
 You are discovering pretty quite rails app template to have pre-settuped app ready to develop.
