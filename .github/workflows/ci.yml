@@ -1,0 +1,61 @@
+name: CI
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+    env:
+      RAILS_ENV: test
+      DUMMY_DATABASE_USERNAME: postgres
+      DUMMY_DATABASE_PASSWORD: postgres
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.2
+          bundler-cache: true
+          cache-version: 1
+      - name: Install PostgreSQL client
+        run: |
+          sudo apt-get -yqq install libpq-dev
+      - name: Install Ruby on Rails
+        run: |
+          gem install rails
+      - name: Set up fake git config
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "example@mail.io"
+      - name: Build App
+        run: |
+          rails new dummy -a propshaft \
+                                      --css=tailwind \
+                                      --database=postgresql \
+                                      --skip-jbuilder -T \
+                                      --template=template.rb
+      - name: Setup Database
+        run: |
+          cd dummy
+          ls
+          cp config/database.yml.example config/database.yml
+          bundle exec rails db:create db:migrate
+      - name: Run rspec
+        run: |
+          cd dummy
+          rspec
+      - name: Run rubocop
+        run: |
+          cd dummy
+          rubocop
