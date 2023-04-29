@@ -37,6 +37,9 @@ apply "template_parts/db_template.rb"
 
 Then simply run `rails s` and enjoy the codding!
 
+## Todo
+- [ ] add `dotenv` gem
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
