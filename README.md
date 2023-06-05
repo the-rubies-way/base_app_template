@@ -46,6 +46,7 @@ Then simply run `rails s` and enjoy the codding!
 ## Todo
 
 - [ ] add `dotenv` gem
+- [ ] Solve problem of using remote template, might be store it at "rails bytes"
 
 ## License
 
