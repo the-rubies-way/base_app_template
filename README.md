@@ -2,19 +2,25 @@
 
 # Hi
 
-You are discovering pretty quite rails app template to have pre-settuped app ready to develop.
+You are discovering a pretty quiet rails app template to have a pre-setup app ready to develop.
 
-To generate project use command:
+To generate a project run:
 
-```bach
-rails new app_name -a propshaft --css=tailwind --database=postgresql --skip-jbuilder -T --template=https://github.com/the-rubies-way/base_app_template/blob/master/template.rb
+```bash
+rails new app_name -a propshaft --css=tailwind --database=postgresql --skip-jbuilder -T --template=https://raw.githubusercontent.com/the-rubies-way/base_app_template/master/template_by_github.rb
 ```
 
-To generate whole project, or just add `--template=https://github.com/the-rubies-way/base_app_template/blob/master/template.rb` to your app generation string if you have own options
+or using a local template:
+
+```bash
+rails new app_name -a propshaft --css=tailwind --database=postgresql --skip-jbuilder -T --template=base_app_template/template_by_github.rb
+```
+
+To generate a whole project just add `--template=https://github.com/the-rubies-way/base_app_template/blob/master/template.rb` to your app generation string if you have your own options
 
 ###### Some tips:
 
-You can disable some templates generation by just commenting or simply removing line with its template, like:
+You can disable some templates generation by just commenting or simply removing a line with its template, like:
 
 ```ruby
 ...
@@ -38,6 +44,7 @@ apply "template_parts/db_template.rb"
 Then simply run `rails s` and enjoy the codding!
 
 ## Todo
+
 - [ ] add `dotenv` gem
 
 ## License
