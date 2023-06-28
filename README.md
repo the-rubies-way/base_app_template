@@ -47,6 +47,8 @@ Then simply run `rails s` and enjoy the codding!
 
 - [ ] add `dotenv` gem
 - [ ] Solve problem of using remote template, might be store it at "rails bytes"
+- [ ] Add gem "rails-controller-testing"
+- [ ] Insert all required includes to "spec/rails_helper.rb"
 
 ## License
 
