@@ -36,7 +36,7 @@ gem "simple_form", git: "https://github.com/loqimean/simple_form"
 gem "ransack" #=> search and filter records
 gem "kaminari" #=> pagination
 gem "meta-tags"
-gem "rails-i18n", "~> 7.0.0"
+gem "rails-i18n"
 gem "inline_svg", "~> 1.8"
 
 append_file "Gemfile", <<~RUBY
