@@ -18,7 +18,11 @@ gem_group :development, :test do
 end
 
 gem_group :development do
-  gem "annotate", "~> 3.2"
+  if Gem::Version.new(Rails::VERSION::STRING) >= Gem::Version.new("8.0.0")
+    gem "annotate", git: "https://github.com/absk1317/annotate_models", branch: "rails-8"
+  else
+    gem "annotate"
+  end
   gem "rails_live_reload"
 
   # TODO: initialize any_login
