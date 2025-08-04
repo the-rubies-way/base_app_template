@@ -13,7 +13,7 @@ rails new app_name -a propshaft --css=tailwind --database=postgresql --skip-jbui
 or using a local template:
 
 ```bash
-rails new app_name -a propshaft --css=tailwind --database=postgresql --skip-jbuilder -T --template=base_app_template/template_by_github.rb
+rails new app_name -a propshaft --css=tailwind --database=postgresql --skip-jbuilder -T --template=base_app_template/template.rb
 ```
 
 To generate a whole project just add `--template=https://github.com/the-rubies-way/base_app_template/blob/master/template.rb` to your app generation string if you have your own options
