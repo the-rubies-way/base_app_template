@@ -18,7 +18,7 @@ gem_group :development, :test do
 end
 
 gem_group :development do
-  gem "annotate"
+  gem "annotate", "~> 3.2"
   gem "rails_live_reload"
 
   # TODO: initialize any_login
